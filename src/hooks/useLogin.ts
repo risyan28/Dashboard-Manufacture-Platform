@@ -12,7 +12,7 @@ export function useLogin() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (username && password) {
-      router.push("/dashboard-user");
+      router.push("/dashboard-user/manufacture");
     } else {
       alert("Please fill in both fields.");
     }
