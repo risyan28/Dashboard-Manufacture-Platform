@@ -1,0 +1,5 @@
+node_modules
+.next
+*.zip
+src\app\dashboard-user\cluster\
+src\components\cluster\
