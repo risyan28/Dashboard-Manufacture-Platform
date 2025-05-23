@@ -1,16 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
-import Link from "next/link";
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, Home, RefreshCw } from "lucide-react";
 import { Button } from "~/components/ui/button";
 
-<<<<<<< HEAD
 // Declare the custom window property
 declare global {
   interface Window {
@@ -20,8 +15,6 @@ declare global {
   }
 }
 
-=======
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 export default function NotFound() {
   const router = useRouter();
   const [countdown, setCountdown] = useState(15);
@@ -49,7 +42,6 @@ export default function NotFound() {
     return () => clearTimeout(timer);
   }, [countdown, router]);
 
-<<<<<<< HEAD
   // Use the custom back function if available
   const handleBack = () => {
     if (typeof window !== "undefined" && window.appNavigation?.goBack) {
@@ -60,8 +52,6 @@ export default function NotFound() {
     }
   };
 
-=======
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#f9f9f9] via-[#e0f2ff] to-[#c2d3ff]">
       {/* New Minimalist Background */}
@@ -89,11 +79,7 @@ export default function NotFound() {
             ],
             transition: {
               duration: 30,
-<<<<<<< HEAD
               repeat: Number.POSITIVE_INFINITY,
-=======
-              repeat: Infinity,
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
               ease: "linear",
             },
           }}
@@ -160,13 +146,8 @@ export default function NotFound() {
         >
           <Button
             variant="outline"
-<<<<<<< HEAD
             className="group border-purple-500 bg-purple-500/20 hover:bg-purple-500/20"
             onClick={handleBack}
-=======
-            className="group border-purple-500 bg-purple-500/20 bg-transparent hover:bg-purple-500/20"
-            onClick={() => router.back()}
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
           >
             <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
             Go Back
@@ -185,11 +166,7 @@ export default function NotFound() {
 
           <Button
             variant="outline"
-<<<<<<< HEAD
             className="border-blue-500 bg-purple-500/20 hover:bg-blue-500/20"
-=======
-            className="border-blue-500 bg-purple-500/20 bg-transparent hover:bg-blue-500/20"
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
             onClick={() =>
               typeof window !== "undefined" && window.location.reload()
             }
