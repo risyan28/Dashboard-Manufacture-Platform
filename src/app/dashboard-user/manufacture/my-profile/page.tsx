@@ -73,6 +73,7 @@ export default function ProductionPlanPage() {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
   // Use the custom back function if available
   const handleBack = () => {
     if (typeof window !== "undefined" && window.appNavigation?.goBack) {
@@ -83,6 +84,8 @@ export default function ProductionPlanPage() {
     }
   };
 
+=======
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
   return (
     <div className="max-w-8xl mx-auto w-full px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       {/* Header Section - Modified for mobile single-line layout */}
@@ -103,7 +106,11 @@ export default function ProductionPlanPage() {
               boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
             }}
             whileTap={{ scale: 0.98 }}
+<<<<<<< HEAD
             onClick={handleBack}
+=======
+            onClick={() => window.history.back()}
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
             className="shrink-0 rounded-full bg-white p-2 shadow-sm backdrop-blur-sm transition-all sm:p-3"
             aria-label="Back"
           >

@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 import {
   ArrowLeft,
   Play,
@@ -181,14 +182,23 @@ const formatDate = (dateString: string | Date) => {
 
 // Initial data
 const initialSequences = generateSequenceData();
+=======
+import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 
 export default function ProductionPlanPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
   const [sequences, setSequences] = useState(initialSequences);
   const [isSimulationRunning, setIsSimulationRunning] = useState(false);
   const [simulationSpeed, setSimulationSpeed] = useState(1); // 1x speed
   const [viewMode, setViewMode] = useState("table"); // "table" or "card"
+=======
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 
   // Simulate loading delay
   useEffect(() => {
@@ -196,6 +206,7 @@ export default function ProductionPlanPage() {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
   // Use the custom back function if available
   const handleBack = () => {
     if (typeof window !== "undefined" && window.appNavigation?.goBack) {
@@ -362,6 +373,8 @@ export default function ProductionPlanPage() {
     type: "history",
   }));
 
+=======
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
   return (
     <div className="max-w-8xl mx-auto w-full px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       {/* Header Section - Modified for mobile single-line layout */}
@@ -382,7 +395,11 @@ export default function ProductionPlanPage() {
               boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
             }}
             whileTap={{ scale: 0.98 }}
+<<<<<<< HEAD
             onClick={handleBack}
+=======
+            onClick={() => window.history.back()}
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
             className="shrink-0 rounded-full bg-white p-2 shadow-sm backdrop-blur-sm transition-all sm:p-3"
             aria-label="Back"
           >
@@ -409,7 +426,11 @@ export default function ProductionPlanPage() {
               <div className="flex items-center gap-3">
                 <h1 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl lg:text-4xl">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+<<<<<<< HEAD
                     Production Sequence Monitor
+=======
+                    Production Plan
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
                   </span>
                 </h1>
               </div>
@@ -434,6 +455,7 @@ export default function ProductionPlanPage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
+<<<<<<< HEAD
           className="rounded-xl border border-gray-100 bg-white/80 p-4 shadow-sm backdrop-blur-sm sm:p-6"
         >
           {/* Simulation Controls */}
@@ -837,6 +859,16 @@ export default function ProductionPlanPage() {
               </CardHeader>
             </Card>
           )}
+=======
+          className="min-h-[200px] rounded-xl border border-gray-100 bg-white/80 p-4 shadow-sm backdrop-blur-sm sm:h-80 sm:p-6"
+        >
+          {/* Data Visualization Placeholder */}
+          <div className="flex h-full items-center justify-center">
+            <p className="text-center text-gray-400">
+              Production analytics will appear here
+            </p>
+          </div>
+>>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
         </motion.div>
       )}
     </div>
