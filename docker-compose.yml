@@ -1,10 +1,6 @@
 services:
   nextjs:
-<<<<<<< HEAD
     container_name: e-WOS
-=======
-    container_name: next-pwa-app
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
     build: .
     ports:
       - "3000:3000"

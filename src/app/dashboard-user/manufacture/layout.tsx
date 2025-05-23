@@ -1,30 +1,22 @@
 "use client";
 
 import type React from "react";
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
-=======
-import { useState } from "react";
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 import { Sidebar } from "~/components/manufacture/dashboard/sidebar";
 import { Header } from "~/components/manufacture/dashboard/header";
 import { BottomNav } from "~/components/manufacture/dashboard/BottomNav";
 import { motion } from "framer-motion";
 import { Footer } from "~/components/manufacture/dashboard/Footer";
 import { AnimatePresence } from "framer-motion";
-<<<<<<< HEAD
 import { LoadingScreen } from "~/components/loading-screen";
 import { NavigationHandler } from "~/components/navigation-handler";
 
-=======
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [key, setKey] = useState(Date.now());
 
@@ -96,49 +88,6 @@ export default function DashboardLayout({
           <BottomNav onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         </>
       )}
-=======
-
-  return (
-    <div className="flex min-h-screen flex-col bg-slate-50">
-      {/* Overlay for when sidebar is open */}
-      {sidebarOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-20 bg-black/20"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
-
-      {/* Sidebar Component */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
-      <div className="flex flex-1 flex-col">
-        {/* Header Component */}
-        <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
-        <AnimatePresence mode="wait">
-          <motion.main
-            key={
-              typeof window !== "undefined"
-                ? window.location.pathname
-                : "default"
-            }
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="flex-1"
-          >
-            {children}
-          </motion.main>
-        </AnimatePresence>
-        {/* Footer Component */}
-        <Footer />
-      </div>
-
-      <BottomNav onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
->>>>>>> 16dd84d0543aa67d56cabe2c1b32718a729a2776
     </div>
   );
 }
